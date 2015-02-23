@@ -2,6 +2,10 @@ machine:
   php:
     version: 5.5.11
 
+dependencies:
+  pre:
+    - sed -i 's/^;//' ~/.phpenv/versions/$(phpenv global)/etc/conf.d/xdebug.ini
+
 test:
   override:
     - ./bin/test.sh
