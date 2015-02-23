@@ -1,0 +1,15 @@
+*~
+*.swp
+*.swo
+\#*\#
+.\#*
+
+.DS_Store
+Desktop.ini
+Thumbs.db
+tags
+composer.phar
+
+nbproject
+
+/vendor/
