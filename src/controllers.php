@@ -26,6 +26,19 @@ $app->get('/add/{num1}/{num2}', function ($num1, $num2) use ($app) {
 ->bind('homepage')
 ;
 
+$app->get('/subtract/{num1}/{num2}', function ($num1, $num2) use ($app) {
+    
+    $calculator = new App\Calculator();
+    $difference = $calculator->subtract(intval($num1), intval($num2));
+    
+    return $app['twig']->render('subtract.html', [
+        'num1' => $num1, 'num2' => $num2, 'difference' => $difference
+    ]);
+})
+->bind('homepage')
+;
+
+
 $app->error(function (\Exception $e, $code) use ($app) {
     if ($app['debug']) {
         return;
