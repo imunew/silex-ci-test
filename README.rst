@@ -1,4 +1,5 @@
-![circleci](https://circleci.com/gh/imunew/silex-ci-test.png?style=shield&circle-token=f506e823239b25950fd42c20dee8dcb703eac1ce)
+.. image:: https://circleci.com/gh/imunew/silex-ci-test.svg?style=svg
+    :target: https://circleci.com/gh/imunew/silex-ci-test
 
 Silex Skeleton
 ==============
