@@ -7,4 +7,4 @@ test:
     - ./bin/test.sh
   post:
     - mkdir -p $CIRCLE_TEST_REPORTS/phpunit
-    - cp ./var/report/clover.xml $CIRCLE_TEST_REPORTS/phpunit
+    - find . -type f -regex ".*/var/report/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/phpunit/ \;
