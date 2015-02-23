@@ -1,3 +1,5 @@
+https://circleci.com/gh/imunew/silex-ci-test.png?circle-token=f506e823239b25950fd42c20dee8dcb703eac1ce
+
 Silex Skeleton
 ==============
 
