@@ -5,3 +5,6 @@ machine:
 test:
   override:
     - ./bin/test.sh
+  post:
+    - mkdir -p $CIRCLE_TEST_REPORTS/phpunit
+    - cp ./var/report/clover.xml $CIRCLE_TEST_REPORTS/phpunit
