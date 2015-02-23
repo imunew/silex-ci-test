@@ -1,1 +1,1 @@
-vendor/bin/phpunit -c ./ --coverage-clover=var/report/clover.xml src/App/Test/*Test.php
+vendor/bin/phpunit -c ./ --coverage-clover=$CIRCLE_TEST_REPORTS/clover.xml --log-junit=$CIRCLE_TEST_REPORTS/junit.xml src/App/Test/*Test.php
