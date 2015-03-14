@@ -1,7 +1,16 @@
 before_commands:
   - "composer install --prefer-source"
 
-tools:
-  php_code_coverage:
-    enabled: true
-    test_command: phpunit -c phpunit.xml --coverage-clover=var/report/coverage.xml
+#tools:
+#  php_code_coverage:
+#    enabled: true
+#    test_command: phpunit -c phpunit.xml --coverage-clover=var/report/coverage.xml
+    
+build:
+  tests:
+    override:
+      -
+        command: 'phpunit --coverage-clover=var/report/coverage.xml'
+        coverage:
+          file: 'var/report/coverage.xml'
+          format: 'php-clover'
