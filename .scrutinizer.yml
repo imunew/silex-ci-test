@@ -4,4 +4,4 @@ before_commands:
 tools:
   php_code_coverage:
     enabled: true
-    test_command: phpunit -c phpunit.xml
+    test_command: phpunit -c phpunit.xml --coverage-clover=var/report/coverage.xml
