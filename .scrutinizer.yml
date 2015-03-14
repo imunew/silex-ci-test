@@ -1,14 +1,7 @@
 before_commands:
-    - "composer install --prefer-source"
+  - "composer install --prefer-source"
 
 tools:
-    external_code_coverage:
-        enabled: true
-        timeout: 300
-        filter:
-            excluded_paths:
-                - 'bin/*'
-                - 'config/*'
-                - 'templates/*'
-                - 'var/*'
-                - 'vendor/*'
+  php_code_coverage:
+    enabled: true
+    test_command: phpunit -c phpunit.xml
